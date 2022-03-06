@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Build site with MkDocs | LANDFILL</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Build site with MkDocs and deploy on github pages.">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Build site with MkDocs and deploy on github pages.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build site with MkDocs">
 <meta property="og:url" content="http://landfill.cc/posts/mkdocs">
@@ -22,89 +22,143 @@
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed/imgs/image-20210614210231958.png">
-  
-    <link rel="alternate" href="/atom.xml" title="LANDFILL" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Build site with MkDocs</title>
+    <!-- styles -->
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
+    <!-- persian styles -->
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="LANDFILL" type="application/atom+xml">
+</head>
 
-  
-<meta name="generator" content="Hexo 6.0.0"></head>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/posts/typecho"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/randomness"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/mkdocs"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/mkdocs&text=Build site with MkDocs"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/mkdocs&is_video=false&description=Build site with MkDocs"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Build site with MkDocs&body=Check out this article: http://landfill.cc/posts/mkdocs"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/mkdocs&name=Build site with MkDocs&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/mkdocs&t=Build site with MkDocs"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">LANDFILL</a>
-      </h1>
-      
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://landfill.cc"></form>
-      </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-MkDocs"><span class="toc-number">1.</span> <span class="toc-text">What is MkDocs?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deploying"><span class="toc-number">3.</span> <span class="toc-text">Deploying</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-MkDocs-Material-Theme"><span class="toc-number">4.</span> <span class="toc-text">Use MkDocs-Material Theme</span></a></li></ol>
     </div>
-  </div>
-</header>
+  </span>
+</div>
 
-      <div class="outer">
-        <section id="main"><article id="post-2021-06-14-mkdoc使用教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/mkdocs" class="article-date">
-  <time class="dt-published" datetime="2021-06-13T16:22:46.000Z" itemprop="datePublished">2021-06-14</time>
-</a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Notes/">Notes</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="content index py4">
         
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      Build site with MkDocs
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Build site with MkDocs
     </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">exit.</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-06-13T16:22:46.000Z" itemprop="datePublished">2021-06-14</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Notes/">Notes</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/MkDocs/" rel="tag">MkDocs</a>, <a class="tag-link-link" href="/tags/blog/" rel="tag">blog</a>
+    </div>
+
+
+    </div>
+  </header>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="What-is-MkDocs"><a href="#What-is-MkDocs" class="headerlink" title="What is MkDocs?"></a>What is MkDocs?</h2><p>Accroding to the description from the offical site of MkDocs: </p>
+  <div class="content" itemprop="articleBody">
+    <h2 id="What-is-MkDocs"><a href="#What-is-MkDocs" class="headerlink" title="What is MkDocs?"></a>What is MkDocs?</h2><p>Accroding to the description from the offical site of MkDocs: </p>
 <blockquote>
 <p>MkDocs is a <strong>fast</strong>, <strong>simple</strong> and <strong>downright gorgeous</strong> static site generator that’s geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Start by reading the <a target="_blank" rel="noopener" href="https://www.mkdocs.org/getting-started/">introductory tutorial</a>, then check the <a target="_blank" rel="noopener" href="https://www.mkdocs.org/user-guide/">User Guide</a> for more information.</p>
 </blockquote>
@@ -136,157 +190,138 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">site_name:</span> <span class="string">Notebook</span></span><br><span class="line"><span class="attr">site_url:</span> <span class="string">https://landfill.cc/wiki/</span></span><br><span class="line"><span class="comment">#site_description: cs WIKI</span></span><br><span class="line"><span class="comment">#copyright: Copyright © 2020 [Landfill](https://www.landfill.cc/)</span></span><br><span class="line"><span class="attr">nav:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="attr">Home:</span> <span class="string">index.md</span></span><br><span class="line"><span class="comment">#  - DEV: dev.md </span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">Documents:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">Usage :</span> <span class="string">test/usage.md</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">Tutorial:</span> <span class="string">test/tutorial.md</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">Data Structure:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">AVL Tree:</span> <span class="string">DataStructure/about.md</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">OS:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">OS NOTES:</span> <span class="string">OS/os.md</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">test:</span> <span class="string">test.md</span></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">#主题</span></span><br><span class="line"><span class="attr">theme:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">material</span></span><br><span class="line">  <span class="comment">#custom_dir: material</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">&#x27;zh&#x27;</span>  <span class="comment"># 配置语言</span></span><br><span class="line">  <span class="attr">palette:</span>  <span class="comment"># 颜色</span></span><br><span class="line">    <span class="comment"># - scheme: default</span></span><br><span class="line">    <span class="attr">primary:</span> <span class="string">indigo</span></span><br><span class="line">    <span class="attr">accent:</span> <span class="string">indigo</span></span><br><span class="line">    <span class="comment">#   toggle:</span></span><br><span class="line">    <span class="comment">#     icon: material/toggle-switch-off-outline</span></span><br><span class="line">    <span class="comment">#     name: Switch to dark mode</span></span><br><span class="line">    <span class="comment"># - scheme: slate</span></span><br><span class="line">    <span class="comment">#   primary: indigo</span></span><br><span class="line">    <span class="comment">#   accent: indigo</span></span><br><span class="line">    <span class="comment">#   toggle:</span></span><br><span class="line">    <span class="comment">#     icon: material/toggle-switch</span></span><br><span class="line">    <span class="comment">#     name: Switch to light mode</span></span><br><span class="line">  <span class="attr">features:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">navigation.tabs</span> <span class="comment"># horizon tabs </span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">navigation.tracking</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">navigation.expand</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">navigation.top</span></span><br><span class="line">  <span class="comment">#custom_dir: &#x27;docs/resources/&#x27;</span></span><br><span class="line">  <span class="attr">font:</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">Roboto</span></span><br><span class="line">    <span class="attr">code:</span> <span class="string">Roboto</span> <span class="string">Mono</span></span><br><span class="line"></span><br><span class="line"><span class="attr">markdown_extensions:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">admonition</span>  <span class="comment"># 提示块</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">footnotes</span>  <span class="comment"># 脚注</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">meta</span>  <span class="comment"># 定义元数据，通过文章上下文控制，如disqus</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.caret</span>  <span class="comment"># 下划线上标</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.tilde</span>  <span class="comment"># 删除线下标</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.critic</span>  <span class="comment"># 增加删除修改高亮注释，可修饰行内或段落</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.details</span>  <span class="comment"># 提示块可折叠</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.inlinehilite</span>  <span class="comment"># 行内代码高亮</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.mark</span>  <span class="comment"># 文本高亮</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.smartsymbols</span>  <span class="comment"># 符号转换</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pymdownx.superfences</span>  <span class="comment"># 代码嵌套在列表里</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">codehilite:</span>    <span class="comment"># 代码高亮，显示行号</span></span><br><span class="line">      <span class="attr">guess_lang:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">linenums:</span> <span class="literal">true</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">toc:</span>  <span class="comment"># 锚点</span></span><br><span class="line">      <span class="attr">permalink:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#  - pymdownx.arithmatex  # 数学公式</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">pymdownx.betterem:</span>  <span class="comment"># 对加粗和斜体更好的检测</span></span><br><span class="line">      <span class="attr">smart_enable:</span> <span class="string">all</span></span><br><span class="line"><span class="comment">#  - pymdownx.emoji:  # 表情</span></span><br><span class="line"><span class="comment">#      emoji_generator: !!python/name:pymdownx.emoji.to_svg</span></span><br><span class="line"><span class="comment">#  - pymdownx.magiclink  # 自动识别超链接</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">pymdownx.tasklist:</span>  <span class="comment"># 复选框checklist</span></span><br><span class="line">      <span class="attr">custom_checkbox:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">extra:</span></span><br><span class="line">  <span class="attr">search:</span></span><br><span class="line">    <span class="attr">language:</span> <span class="string">&#x27;jp&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#扩展样式</span></span><br><span class="line"><span class="comment"># extra_css:</span></span><br><span class="line"><span class="comment">#   - resources/css/extra.css</span></span><br></pre></td></tr></table></figure>
 
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://landfill.cc/posts/mkdocs" data-id="cl0feuiw5001rbcu33ofq8mo2" data-title="Build site with MkDocs" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MkDocs/" rel="tag">MkDocs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
-
-    </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/posts/undefined" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-    <a href="/posts/randomness" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">两种选择</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-</section>
+
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notes/">Notes</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%91%98%E5%BD%95/">摘录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a></li></ul>
-    </div>
-  </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aria2/" rel="tag">Aria2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excerpt/" rel="tag">Excerpt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MkDocs/" rel="tag">MkDocs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Politics/" rel="tag">Politics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thoughts/" rel="tag">Thoughts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Aria2/" style="font-size: 10px;">Aria2</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Excerpt/" style="font-size: 10px;">Excerpt</a> <a href="/tags/MkDocs/" style="font-size: 10px;">MkDocs</a> <a href="/tags/Politics/" style="font-size: 15px;">Politics</a> <a href="/tags/Thoughts/" style="font-size: 20px;">Thoughts</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
+    <div id="nav-footer" style="display: none">
       <ul>
-        
-          <li>
-            <a href="/posts/undefined">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/posts/mkdocs">Build site with MkDocs</a>
-          </li>
-        
-          <li>
-            <a href="/posts/randomness">两种选择</a>
-          </li>
-        
-          <li>
-            <a href="/posts/nausea">恶心</a>
-          </li>
-        
-          <li>
-            <a href="/posts/thoughtsof202009">语言碎片 2020/09</a>
-          </li>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
         
       </ul>
     </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 exit.<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-MkDocs"><span class="toc-number">1.</span> <span class="toc-text">What is MkDocs?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deploying"><span class="toc-number">3.</span> <span class="toc-text">Deploying</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-MkDocs-Material-Theme"><span class="toc-number">4.</span> <span class="toc-text">Use MkDocs-Material Theme</span></a></li></ol>
     </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/mkdocs"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/mkdocs&text=Build site with MkDocs"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/mkdocs&is_video=false&description=Build site with MkDocs"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Build site with MkDocs&body=Check out this article: http://landfill.cc/posts/mkdocs"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/mkdocs&title=Build site with MkDocs"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/mkdocs&name=Build site with MkDocs&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/mkdocs&t=Build site with MkDocs"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    exit.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
   </div>
 </footer>
 
     </div>
-    <nav id="mobile-nav">
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/main.js"></script>
 
+<!-- search -->
 
+<!-- Google Analytics -->
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+<!-- Baidu Analytics -->
 
+<!-- Cloudflare Analytics -->
 
+<!-- Umami Analytics -->
 
+<!-- Disqus Comments -->
 
-<script src="/js/script.js"></script>
+<!-- utterances Comments -->
 
-
-
-
-
-  </div>
 </body>
 </html>
