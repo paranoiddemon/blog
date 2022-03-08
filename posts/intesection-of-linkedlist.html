@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="问题 相交：两个链表共用一个节点，返回第一个共用的节点。  分析判断链表是否有环：  额外空间。利用一个set，遍历加入，如果发现一个重复的节点，就是入环的第一个节点。只有一个next指针。有环一定会指回自身的节点。 不申请额外空间。快慢指针。快指针走两步，慢指针走一步。二者一定会会相遇。相遇的时候快指针回到head，慢指针不动。之后快指针也走一步。二者第二次相遇的时候，一定会在环的第一个入环节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="两个单链表相交问题">
+<meta property="og:url" content="http://landfill.cc/posts/intesection-of-linkedlist">
+<meta property="og:site_name" content="LANDFILL">
+<meta property="og:description" content="问题 相交：两个链表共用一个节点，返回第一个共用的节点。  分析判断链表是否有环：  额外空间。利用一个set，遍历加入，如果发现一个重复的节点，就是入环的第一个节点。只有一个next指针。有环一定会指回自身的节点。 不申请额外空间。快慢指针。快指针走两步，慢指针走一步。二者一定会会相遇。相遇的时候快指针回到head，慢指针不动。之后快指针也走一步。二者第二次相遇的时候，一定会在环的第一个入环节点">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203071729131.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203081034985.png">
+<meta property="article:published_time" content="2022-03-08T09:12:00.000Z">
+<meta property="article:modified_time" content="2022-03-08T07:37:58.513Z">
+<meta property="article:author" content="exit.">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203071729131.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>两个单链表相交问题</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="LANDFILL" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/life-in-kitchen"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/intesection-of-linkedlist"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/intesection-of-linkedlist&text=两个单链表相交问题"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/intesection-of-linkedlist&is_video=false&description=两个单链表相交问题"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=两个单链表相交问题&body=Check out this article: http://landfill.cc/posts/intesection-of-linkedlist"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/intesection-of-linkedlist&name=两个单链表相交问题&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/intesection-of-linkedlist&t=两个单链表相交问题"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.</span> <span class="toc-text">复杂度</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        两个单链表相交问题
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">exit.</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-03-08T09:12:00.000Z" itemprop="datePublished">2022-03-08</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Notes/">Notes</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Algorithm/" rel="tag">Algorithm</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203071729131.png"><br>相交：两个链表共用一个节点，返回第一个共用的节点。</p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>判断链表是否有环：</p>
+<ul>
+<li>额外空间。利用一个set，遍历加入，如果发现一个重复的节点，就是入环的第一个节点。只有一个next指针。有环一定会指回自身的节点。</li>
+<li>不申请额外空间。快慢指针。快指针走两步，慢指针走一步。二者一定会会相遇。相遇的时候快指针回到head，慢指针不动。之后快指针也走一步。二者第二次相遇的时候，一定会在环的第一个入环节点相遇</li>
+</ul>
+<p>分情况讨论：</p>
+<ul>
+<li>两个链表都无环。只有一种情况</li>
+<li>两个链表都有环。</li>
+<li>一个有环一个无环。一定不会相交。要共用节点，节点有且仅有一个next指针。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203081034985.png" alt="linkedlist"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IntersectionOfLinkedList</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">getIntersectionNode</span><span class="params">(ListNode head1, ListNode head2)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(head1 == <span class="literal">null</span> || head2 == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">loop1</span> <span class="operator">=</span> findLoopNode(head1);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">loop2</span> <span class="operator">=</span> findLoopNode(head2);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (loop1 == <span class="literal">null</span> &amp;&amp; loop2 == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> noLoopIntersetion(head1, head2);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(loop1 != <span class="literal">null</span> &amp;&amp; loop2 != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> bothLoopIntersetion(head1, head2, loop1, loop2);</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">noLoopIntersetion</span><span class="params">(ListNode head1, ListNode head2)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(head1 == <span class="literal">null</span> || head2 == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 两个链表的长度之差。</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur1</span> <span class="operator">=</span> head1;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur2</span> <span class="operator">=</span> head2;</span><br><span class="line">        <span class="comment">// head1.next != null指针会停留在最后一个节点</span></span><br><span class="line">        <span class="comment">// head1 != null 指针会在尾节点的下一个null上</span></span><br><span class="line">        <span class="keyword">while</span>(cur1.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            n++；</span><br><span class="line">            cur1 = cur1.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(cur2.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            n--；</span><br><span class="line">            cur2 = cur2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cur1 != cur2) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// cur1为更长的链表, cur2为更短的</span></span><br><span class="line">        cur1 = n &gt; <span class="number">0</span> ? head1 : head2;</span><br><span class="line">        cur2 = cur == head1 ? head2 :head1;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 长的链表先走多出的节点，然后一起走。</span></span><br><span class="line">        n = Math.abs(n);</span><br><span class="line">        <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            n--;</span><br><span class="line">            cur1 = cur1.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 当二者再次相遇就是交点</span></span><br><span class="line">        <span class="keyword">while</span>(cur1 != cur2) &#123;</span><br><span class="line">            cur1 = cur1.next;</span><br><span class="line">            cur2 = cur2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cur1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">bothLoopIntersetion</span><span class="params">(</span></span><br><span class="line"><span class="params">        ListNode head1, </span></span><br><span class="line"><span class="params">        ListNode head2, </span></span><br><span class="line"><span class="params">        ListNode loop1,</span></span><br><span class="line"><span class="params">        ListNode loop2</span></span><br><span class="line"><span class="params">    )</span>&#123;</span><br><span class="line">        <span class="comment">// 当作无环处理。但是尾节点是loop</span></span><br><span class="line">        <span class="keyword">if</span>(loop1 == loop2) &#123;</span><br><span class="line">            <span class="keyword">if</span>(head1 == <span class="literal">null</span> || head2 == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 两个链表的长度之差。</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">ListNode</span> <span class="variable">cur1</span> <span class="operator">=</span> head1;</span><br><span class="line">            <span class="type">ListNode</span> <span class="variable">cur2</span> <span class="operator">=</span> head2;</span><br><span class="line">            <span class="comment">// head1.next != null指针会停留在最后一个节点</span></span><br><span class="line">            <span class="comment">// head1 != null 指针会在尾节点的下一个null上</span></span><br><span class="line">            <span class="keyword">while</span>(cur1.next != loop1) &#123;</span><br><span class="line">                n++；</span><br><span class="line">                cur1 = cur1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(cur2.next != loop2) &#123;</span><br><span class="line">                n--；</span><br><span class="line">                cur2 = cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// if(cur1 != cur2) &#123;</span></span><br><span class="line">            <span class="comment">//     return null;</span></span><br><span class="line">            <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// cur1为更长的链表, cur2为更短的</span></span><br><span class="line">            cur1 = n &gt; <span class="number">0</span> ? head1 : head2;</span><br><span class="line">            cur2 = cur == head1 ? head2 :head1;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 长的链表先走多出的节点，然后一起走。</span></span><br><span class="line">            n = Math.abs(n);</span><br><span class="line">            <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                cur1 = cur1.next;</span><br><span class="line">                n--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 当二者再次相遇就是交点</span></span><br><span class="line">            <span class="keyword">while</span>(cur1 != cur2) &#123;</span><br><span class="line">                cur1 = cur1.next;</span><br><span class="line">                cur2 = cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> cur1;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="type">ListNode</span> <span class="variable">tmp</span> <span class="operator">=</span> loop1;</span><br><span class="line">            loop1 = loop1.next;</span><br><span class="line">            <span class="comment">// 在环内便利。如果遇到就是相交。如果没有遇到则不相交。</span></span><br><span class="line">            <span class="keyword">while</span>（loop1 != tmp) &#123;</span><br><span class="line">                <span class="keyword">if</span>(loop1 == loop2) &#123;</span><br><span class="line">                    <span class="keyword">return</span> loop1;</span><br><span class="line">                &#125;</span><br><span class="line">                loop1 = loop1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    [141. 环形链表 - 力扣（LeetCode）](https://leetcode-cn.com/problems/linked-list-cycle/)</span></span><br><span class="line"><span class="comment">    leetcode中的该题是只要返回true false。所以可以简化为只要相遇就是true。不需要第二次移动指针。</span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">findLoopNode</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="comment">// </span></span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">null</span> || head.next == <span class="literal">null</span> || head.next.next == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 快慢指针</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head.next;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head.next.next;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(slow != fast) &#123;</span><br><span class="line">            <span class="comment">// 如果fast自身或者下一个节点为空，则链表无环</span></span><br><span class="line">            <span class="keyword">if</span>(fast == <span class="literal">null</span> || fast.next == <span class="literal">null</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// fast移动到头节点。slow指针原地不动。</span></span><br><span class="line">        fast = head;</span><br><span class="line">        <span class="keyword">while</span>(slow != fast) &#123;</span><br><span class="line">            fast = fast.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// fast slow都可</span></span><br><span class="line">        <span class="keyword">return</span> fast;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>时间复杂度：O(N) ，遍历链表的操作<br>空间复杂度：O(1)，只使用有限个变量。</p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.</span> <span class="toc-text">复杂度</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/intesection-of-linkedlist"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/intesection-of-linkedlist&text=两个单链表相交问题"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/intesection-of-linkedlist&is_video=false&description=两个单链表相交问题"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=两个单链表相交问题&body=Check out this article: http://landfill.cc/posts/intesection-of-linkedlist"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/intesection-of-linkedlist&title=两个单链表相交问题"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/intesection-of-linkedlist&name=两个单链表相交问题&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/intesection-of-linkedlist&t=两个单链表相交问题"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2022
+    exit.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'paranoiddemon/paranoiddemon.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
