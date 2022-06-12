@@ -6,7 +6,7 @@
   <link href="http://landfill.cc/atom.xml" rel="self"/>
   
   <link href="http://landfill.cc/"/>
-  <updated>2022-03-27T00:20:06.380Z</updated>
+  <updated>2022-06-12T07:53:46.501Z</updated>
   <id>http://landfill.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to Become a Programmer</title>
+    <link href="http://landfill.cc/posts/be-a-programmer"/>
+    <id>http://landfill.cc/posts/be-a-programmer</id>
+    <published>2022-06-12T04:00:00.000Z</published>
+    <updated>2022-06-12T07:53:46.501Z</updated>
+    
+    <content type="html"><![CDATA[<p>做饭的时候看青菜的生产日期，突然回想起，我正好是两年前的今天开始学习编程，第一次写下Hello World。现在作为一个程序员工作都已经一年有余，正好周末总结下两年的学习成果，算是对这两年时间的记录。</p><h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><ol><li>Java<br>目前的工作语言，主要写Web后端。比较熟悉，语言特性，API，JVM多少都有些了解。当时看的是 <a href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程</a> ，讲的很好很易懂。并不比很多大学老师讲的差，注重实用性，细节且全面，对于两年前初学编程的我来说非常好的教程。</li><li>JavaScript&#x2F;TypeScript<br>基本的语法风格和Java有蛮多相似处。学习起来并不算那么费劲，但是写的不多。但是这种动态语言写起来还是很爽的。TypeScript内容也不算很多，看文档学习。阮一峰的两本教程写的很好。<a href="https://wangdoc.com/javascript/">JavaScript 教程 - 网道</a> 和<a href="https://wangdoc.com/es6/">ES6 教程 - 网道</a>。现在学习新的技术，看文档效率会高一些。偶尔也会看视频学习。<br>学了一些React，或许有时间自己写个Side Project。Vue和Angular看过点文档，公司在用Angular。很少写前端。</li><li>Go<br>最近学习分布式系统，需要用Go，看了<a href="https://go.dev/tour/welcome/1">A Tour of Go</a>，偶尔用Go刷题，熟悉语法。还是不太熟。</li><li>Python<br>不能算掌握，了解基本语法。看的Github上的教程 <a href="https://github.com/jackfrued/Python-100-Days">jackfrued&#x2F;Python-100-Days: Python - 100天从新手到大师</a></li></ol><h2 id="CS基础"><a href="#CS基础" class="headerlink" title="CS基础"></a>CS基础</h2><ol><li>操作系统<br>主要看了 <a href="https://www.bilibili.com/video/BV1uW411f72n?spm_id_from=333.337.search-card.all.click&vd_source=8e1a20c85a51789c4d1b6ca3da3184a3">清华 操作系统原理</a> ，最近看了一些南京大学的操作系统课程讲的会比较深入一些。书看了OSTEP <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a>，已经有中文版了。</li><li>编译器<br>看了 <a href="http://craftinginterpreters.com/">Crafting Interpreters</a>  ，但是只实现了第一部分的jlox解释器。第二部分用C语言写一个VM或许才是主要的部分。精力不足就搁置了。</li><li>体系结构<br>看了<a href="https://book.douban.com/subject/4822685//">编码 (豆瓣)</a>，非常好的一本书，想要理解计算机是怎么运作的，CPU是如何计算的，这是一本非常简明易懂的书。还有CSAPP也是很著名了，我还没有看完。</li><li>计算机网络<br>看了 谢希仁的计算机网络，买了计算机网络自顶向下，但是还没有读完。HTTP, HTTPS(TLS), TCP&#x2F;IP协议栈。细节比较多。</li><li>数据结构和算法<br>在Coursera上看了两周Princeton的算法课，也没有看完，但是配套的教材 算法第四版是本非常好的书，可以时常查阅。另外在B站看了左程云的算法课。理论性肯定不如Princeton的课，但是更加实用一点。对基础数据结构比较熟悉。LeetCode最近没事在刷，目前大概做了230题左右，算是有挺多进步的。</li><li>数据库原理<br>之前在看CMU的Andy Palvo的课<a href="https://15445.courses.cs.cmu.edu/fall2021/">CMU 15-445&#x2F;645 :: Intro to Database Systems (Fall 2021)</a>，但是课程也只看了五周左右，看到Buffer Pool。或许之后还会继续看。</li><li>分布式系统<br>在学习MIT的 <a href="https://pdos.csail.mit.edu/6.824/schedule.html">6.824 Schedule: Spring 2022</a> 希望能坚持把Lab都做完。<br>DDIA基本读完了。非常好的分布式系统的书。</li></ol><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><ol><li>Git<br>现在对git算是能比较用的娴熟，之前还是很多都不懂。主要看的 <a href="https://git-scm.com/book/en/v2">Git - Book</a></li><li>CI&#x2F;CD<br>最近项目用到，学习了一些CI&#x2F;CD 相关的东西。 TeamCity Openshift之类的。还有一些公司在用的不是那么大众的工具，顺便了解了一些.NET相关的技术。</li><li>其他一些中间件，框架，类库。只是如何使用，原理还有很多不懂的，不列举了。学会看文档，很多东西学起来也快。</li><li>设计模式，软件工程等</li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>最重要的能力其实是，善于使用搜索引擎，不要用百度。多用英文搜索。自己解决问题，收集信息。互联网能解决大部分问题</li><li>需要持续不断学习，保持好奇心，保持折腾。有时候也挺辛苦的</li><li>注意身体健康。容易久坐和熬夜。多运动，少做，保持良好的习惯。</li><li>有时候不能把眼光局限在那一点地方。Think outside the box</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;做饭的时候看青菜的生产日期，突然回想起，我正好是两年前的今天开始学习编程，第一次写下Hello World。现在作为一个程序员工作都已经一年有余，正好周末总结下两年的学习成果，算是对这两年时间的记录。&lt;/p&gt;
+&lt;h2 id=&quot;编程语言&quot;&gt;&lt;a href=&quot;#编程语言&quot; cl</summary>
+      
+    
+    
+    
+    <category term="Notes" scheme="http://landfill.cc/categories/Notes/"/>
+    
+    
+    <category term="Programming" scheme="http://landfill.cc/tags/Programming/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉树基础问题</title>
@@ -70,9 +95,9 @@
     <link href="http://landfill.cc/posts/life-in-kitchen"/>
     <id>http://landfill.cc/posts/life-in-kitchen</id>
     <published>2021-07-17T09:12:00.000Z</published>
-    <updated>2022-03-07T06:35:32.166Z</updated>
+    <updated>2022-06-12T07:54:33.042Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/image-20210717170919873.png" alt="enjoy obesity"></p><span id="more"></span><p>1. </p><p>自从购置了厨房秤，开始对手边的一切事物进行质量的测量。</p><p>一颗鸡蛋50g，去壳后44g。</p><p>一根黄瓜275g。一个番茄215g。</p><p>一盒五花肉400g。</p><p>发现美团买菜时常缺斤少两。很阴险。</p><p>从前只从外观上观测事物，非常片面，认识论的一种缺失。</p><p>2. </p><p>19.9元随便买的不锈钢刀，用了大半年后切肉很费劲。购买了磨刀石并苦心专研磨刀技术，需要找到某个角度，左手捏住刀片，右手进行推拉，粗磨后再进行细磨，磨完后试刀非常满足。</p><p>都市青年人必须拥有一把锋利的刀。</p><p>3. </p><p>购买了捣蒜臼，很小就想拥有一个。因为使用后还要清洗，所以只在吃火锅的时候使用过，重大设计缺陷。</p><p>4. </p><p>湿垃圾才是真正的垃圾，易腐败，发臭，长虫，恶心至极。其他垃圾只能叫废品。</p><p>5. </p><p>清空冰箱食材令人满足，享受东西用完的感觉。</p><p>三个季度消耗了5kg装大米多袋，食用油两桶，耗油两瓶，番茄酱两瓶，食盐、鸡精多袋，料酒、酱油多瓶，黑胡椒粉一瓶，土豆淀粉一包，八角、香叶、桂皮约100g，冰糖一包，家里寄的腊肉五斤，粉干若干斤，粉丝若干斤。</p><p>6. </p><p>我不能没有小米椒。</p><p>7. </p><p>深度调研铁锅，铸铁锅，不粘锅，铜锅，康宁锅等多种锅具。最终随意购买销量排名较前的不粘锅和汤锅。</p><p>深度调研花生油，菜籽油，葵花籽油，猪油，橄榄油等多种食用油。最终随意购买了销量排名较前的某款调和油。</p><p>深度调研土豆淀粉，玉米淀粉，红薯淀粉，木薯淀粉，小麦淀粉等多款淀粉。最终随意买了一款玉米淀粉。</p><p>8. </p><p>掌握常见食材市场价格及其波动。</p><p>掌握食材的保存期限。</p><p>掌握菜肴烹饪基本技术，如火候、调味、食材处理等。</p><p>掌握多道菜肴烹饪方法，如红烧肉、排骨汤等常见菜。</p><p>了解杭椒、线椒、青椒、螺丝椒的区别。</p><p>了解猪肉不同部位的区别。</p><p>能够辨认常见绿叶菜，常见鱼类。</p><p>9. </p><p>用完厨房会清理餐桌，灶台，清洗锅盖，丢湿垃圾的人才值得信任。</p><ol start="10"><li></li></ol><p>下面开始技术总结：一个人做饭会因为做太多又不想浪费，而导致肥胖，还是建议点外卖。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/image-20210717170919873.png" alt="enjoy obesity"></p><span id="more"></span><p>自从购置了厨房秤，开始对手边的一切事物进行质量的测量。</p><p>一颗鸡蛋50g，去壳后44g。</p><p>一根黄瓜275g。一个番茄215g。</p><p>一盒五花肉400g。</p><p>发现美团买菜时常缺斤少两。很阴险。</p><p>从前只从外观上观测事物，非常片面，认识论的一种缺失。</p><p>19.9元随便买的不锈钢刀，用了大半年后切肉很费劲。购买了磨刀石并苦心专研磨刀技术，需要找到某个角度，左手捏住刀片，右手进行推拉，粗磨后再进行细磨，磨完后试刀非常满足。</p><p>都市青年人必须拥有一把锋利的刀。</p><p>购买了捣蒜臼，很小就想拥有一个。因为使用后还要清洗，所以只在吃火锅的时候使用过，重大设计缺陷。</p><p>湿垃圾才是真正的垃圾，易腐败，发臭，长虫，恶心至极。其他垃圾只能叫废品。</p><p>清空冰箱食材令人满足，享受东西用完的感觉。</p><p>三个季度消耗了5kg装大米多袋，食用油两桶，蚝油两瓶，番茄酱两瓶，食盐、鸡精多袋，料酒、酱油多瓶，黑胡椒粉一瓶，土豆淀粉一包，八角、香叶、桂皮约100g，冰糖一包，家里寄的腊肉五斤，粉干若干斤，粉丝若干斤。</p><p>我不能没有小米椒。</p><p>深度调研铁锅，铸铁锅，不粘锅，铜锅，康宁锅等多种锅具。最终随意购买销量排名较前的不粘锅和汤锅。</p><p>深度调研花生油，菜籽油，葵花籽油，猪油，橄榄油等多种食用油。最终随意购买了销量排名较前的某款调和油。</p><p>深度调研土豆淀粉，玉米淀粉，红薯淀粉，木薯淀粉，小麦淀粉等多款淀粉。最终随意买了一款玉米淀粉。</p><p>掌握常见食材市场价格及其波动。</p><p>掌握食材的保存期限。</p><p>掌握菜肴烹饪基本技术，如火候、调味、食材处理等。</p><p>掌握多道菜肴烹饪方法，如红烧肉、排骨汤等常见菜。</p><p>了解杭椒、线椒、青椒、螺丝椒的区别。</p><p>了解猪肉不同部位的区别。</p><p>能够辨认常见绿叶菜，常见鱼类。</p><p>用完厨房会清理餐桌，灶台，清洗锅盖，丢湿垃圾的人才值得信任。</p><p>下面开始技术总结：一个人做饭会因为做太多又不想浪费，而导致肥胖，还是建议点外卖。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/image-20210717170919873.png&quot; alt=&quot;enjoy obesity&quot;&gt;&lt;/p&gt;</summary>
@@ -420,27 +445,6 @@
     
     
     <category term="Politics" scheme="http://landfill.cc/tags/Politics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wish You A Speedy Recovery</title>
-    <link href="http://landfill.cc/posts/speedy-revovery"/>
-    <id>http://landfill.cc/posts/speedy-revovery</id>
-    <published>2020-05-21T14:22:46.000Z</published>
-    <updated>2020-07-15T14:20:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="https://i.loli.net/2020/07/15/RgwzoduGOUfcDTM.jpg" alt="WishYouASpeedyRecovery" style="zoom: 28%;" /><p>最近陪我妈动手术期间的一些记录。</p><ol><li><p>健康是首要的。倒不是想活多久，只是没有赴死的勇气，只能期盼活着期间能不用遭遇这些痛苦。生病的痛苦是最直接易感知的，打针、开刀都令人不寒而栗，放弃一部分人的完整性是接受治疗的前提。医院称得上是人类尊严平均水平最低的场所。</p></li><li><p>不生孩子。做父母的责任之重，不是我所能承受，这是出于自私；孩子会发现存在的痛苦真相，我想必只会是孩子成长过程中的阴影，而无法给与他们任何引导，这是出于责任。</p></li><li><p>努力赚钱。医院治疗相当花钱，一直以来爸妈对我期待很高，而我到现在为止负起的责任实在太少，应该很令他们失望。</p></li><li><p>找机会去一趟精神科。心理状态似乎又开始变坏了，越发憎恶自己。以前蛮好的，不知道这些年是怎么一步步变成今天这样的。徒劳地寻找不存在的答案不过是自我折磨。前不久看《阳光普照》大哭，完全受不了阿豪妈妈伤心，所以不论怎样一定会好好生活的。</p></li><li><p>从最近的生活经验和所见所闻再次验证了这一真理：生活果然就是永恒的疲惫啊。</p></li></ol><p>祝大家健康。</p>]]></content>
-    
-    
-    <summary type="html">祝你早日健康</summary>
-    
-    
-    
-    <category term="经验" scheme="http://landfill.cc/categories/%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="Thoughts" scheme="http://landfill.cc/tags/Thoughts/"/>
     
   </entry>
   
