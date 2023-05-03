@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="二叉树12345class Node&lt;T&gt;&amp;#123;    T val;    Node left;    Node right;&amp;#125;   二叉树的遍历144. 二叉树的前序遍历 - 力扣（LeetCode）94. 二叉树的中序遍历 - 力扣（LeetCode）145. 二叉树的后序遍历 - 力扣（LeetCode） 递归, 迭代, Morris -&gt; 实现二叉树的先序">
+    <meta name="description" content="二叉树12345class Node&lt;T&gt;&amp;#123;    T val;    Node left;    Node right;&amp;#125;  二叉树的遍历144. 二叉树的前序遍历 - 力扣（LeetCode）94. 二叉树的中序遍历 - 力扣（LeetCode）145. 二叉树的后序遍历 - 力扣（LeetCode） 递归, 迭代, Morris -&gt; 实现二叉树的先序、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树基础问题">
+<meta property="og:title" content="Binary Tree Fundamentals">
 <meta property="og:url" content="http://landfill.cc/posts/binary-tree-basics">
 <meta property="og:site_name" content="LANDFILL">
-<meta property="og:description" content="二叉树12345class Node&lt;T&gt;&amp;#123;    T val;    Node left;    Node right;&amp;#125;   二叉树的遍历144. 二叉树的前序遍历 - 力扣（LeetCode）94. 二叉树的中序遍历 - 力扣（LeetCode）145. 二叉树的后序遍历 - 力扣（LeetCode） 递归, 迭代, Morris -&gt; 实现二叉树的先序">
+<meta property="og:description" content="二叉树12345class Node&lt;T&gt;&amp;#123;    T val;    Node left;    Node right;&amp;#125;  二叉树的遍历144. 二叉树的前序遍历 - 力扣（LeetCode）94. 二叉树的中序遍历 - 力扣（LeetCode）145. 二叉树的后序遍历 - 力扣（LeetCode） 递归, 迭代, Morris -&gt; 实现二叉树的先序、">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203270715237.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203270715310.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203121710824.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202203121905335.png">
 <meta property="article:published_time" content="2022-03-12T09:12:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T00:20:06.380Z">
+<meta property="article:modified_time" content="2023-05-03T13:06:49.472Z">
 <meta property="article:author" content="exit.">
 <meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
       
     
     <!-- title -->
-    <title>二叉树基础问题</title>
+    <title>Binary Tree Fundamentals</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -98,16 +98,16 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/binary-tree-basics"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/binary-tree-basics&text=二叉树基础问题"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/binary-tree-basics&is_video=false&description=二叉树基础问题"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=二叉树基础问题&body=Check out this article: http://landfill.cc/posts/binary-tree-basics"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/binary-tree-basics&name=二叉树基础问题&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/binary-tree-basics&t=二叉树基础问题"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/binary-tree-basics&text=Binary Tree Fundamentals"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/binary-tree-basics&is_video=false&description=Binary Tree Fundamentals"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Binary Tree Fundamentals&body=Check out this article: http://landfill.cc/posts/binary-tree-basics"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/binary-tree-basics&name=Binary Tree Fundamentals&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/binary-tree-basics&t=Binary Tree Fundamentals"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -124,7 +124,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        二叉树基础问题
+        Binary Tree Fundamentals
     </h1>
 
 
@@ -162,7 +162,6 @@
 
   <div class="content" itemprop="articleBody">
     <h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span>&lt;T&gt;&#123;</span><br><span class="line">    T val;</span><br><span class="line">    Node left;</span><br><span class="line">    Node right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
 <h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/">144. 二叉树的前序遍历 - 力扣（LeetCode）</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/">94. 二叉树的中序遍历 - 力扣（LeetCode）</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal/">145. 二叉树的后序遍历 - 力扣（LeetCode）</a></p>
 <p>递归, 迭代, Morris -&gt; 实现二叉树的先序、中序、后序遍历。</p>
@@ -392,16 +391,16 @@
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://landfill.cc/posts/binary-tree-basics"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/binary-tree-basics&text=二叉树基础问题"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/binary-tree-basics&is_video=false&description=二叉树基础问题"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=二叉树基础问题&body=Check out this article: http://landfill.cc/posts/binary-tree-basics"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=二叉树基础问题"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/binary-tree-basics&name=二叉树基础问题&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/binary-tree-basics&t=二叉树基础问题"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://landfill.cc/posts/binary-tree-basics&text=Binary Tree Fundamentals"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://landfill.cc/posts/binary-tree-basics&is_video=false&description=Binary Tree Fundamentals"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Binary Tree Fundamentals&body=Check out this article: http://landfill.cc/posts/binary-tree-basics"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://landfill.cc/posts/binary-tree-basics&title=Binary Tree Fundamentals"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://landfill.cc/posts/binary-tree-basics&name=Binary Tree Fundamentals&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://landfill.cc/posts/binary-tree-basics&t=Binary Tree Fundamentals"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
