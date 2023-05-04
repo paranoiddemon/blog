@@ -3,11 +3,11 @@
   <title>LANDFILL</title>
   
   
-  <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/atom.xml" rel="self"/>
+  <link href="https://paranoiddemon.github.io/blog/atom.xml" rel="self"/>
   
-  <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/"/>
+  <link href="https://paranoiddemon.github.io/blog/"/>
   <updated>2022-12-27T09:49:25.992Z</updated>
-  <id>https://paranoiddemon.github.io/paranoiddemon.github.io/</id>
+  <id>https://paranoiddemon.github.io/blog/</id>
   
   <author>
     <name>exit.</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Return to RSS</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/return-to-rss"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/return-to-rss</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/return-to-rss"/>
+    <id>https://paranoiddemon.github.io/blog/posts/return-to-rss</id>
     <published>2022-12-27T09:44:00.000Z</published>
     <updated>2022-12-27T09:49:25.992Z</updated>
     
@@ -34,14 +34,14 @@
     
     
     
-    <category term="Programming" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Programming/"/>
+    <category term="Programming" scheme="https://paranoiddemon.github.io/blog/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>Deploy Code Server on Ubuntu</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/deploy-code-server"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/deploy-code-server</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/deploy-code-server"/>
+    <id>https://paranoiddemon.github.io/blog/posts/deploy-code-server</id>
     <published>2022-12-14T13:44:00.000Z</published>
     <updated>2022-12-14T14:35:05.622Z</updated>
     
@@ -56,17 +56,17 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="Programming" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Programming/"/>
+    <category term="Programming" scheme="https://paranoiddemon.github.io/blog/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode Weekly Contest 301</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/LC-weekly-contest-301"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/LC-weekly-contest-301</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/LC-weekly-contest-301"/>
+    <id>https://paranoiddemon.github.io/blog/posts/LC-weekly-contest-301</id>
     <published>2022-07-11T06:44:00.000Z</published>
     <updated>2022-12-14T14:35:24.026Z</updated>
     
@@ -80,17 +80,17 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="Programming" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Programming/"/>
+    <category term="Programming" scheme="https://paranoiddemon.github.io/blog/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>Golang Notes</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/go-basic"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/go-basic</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/go-basic"/>
+    <id>https://paranoiddemon.github.io/blog/posts/go-basic</id>
     <published>2022-06-16T04:00:00.000Z</published>
     <updated>2022-06-16T09:01:11.329Z</updated>
     
@@ -104,17 +104,17 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="Programming" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Programming/"/>
+    <category term="Programming" scheme="https://paranoiddemon.github.io/blog/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>How to Become a Programmer</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/be-a-programmer"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/be-a-programmer</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/be-a-programmer"/>
+    <id>https://paranoiddemon.github.io/blog/posts/be-a-programmer</id>
     <published>2022-06-12T04:00:00.000Z</published>
     <updated>2022-06-14T06:05:16.091Z</updated>
     
@@ -129,17 +129,17 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="Programming" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Programming/"/>
+    <category term="Programming" scheme="https://paranoiddemon.github.io/blog/tags/Programming/"/>
     
   </entry>
   
   <entry>
     <title>Binary Tree Fundamentals</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/binary-tree-basics"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/binary-tree-basics</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/binary-tree-basics"/>
+    <id>https://paranoiddemon.github.io/blog/posts/binary-tree-basics</id>
     <published>2022-03-12T09:12:00.000Z</published>
     <updated>2023-05-03T13:06:49.472Z</updated>
     
@@ -153,17 +153,17 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="Algorithm" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Algorithm/"/>
+    <category term="Algorithm" scheme="https://paranoiddemon.github.io/blog/tags/Algorithm/"/>
     
   </entry>
   
   <entry>
     <title>厨房生活</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/life-in-kitchen"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/life-in-kitchen</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/life-in-kitchen"/>
+    <id>https://paranoiddemon.github.io/blog/posts/life-in-kitchen</id>
     <published>2021-07-17T09:12:00.000Z</published>
     <updated>2022-06-12T07:54:33.042Z</updated>
     
@@ -174,15 +174,15 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
   </entry>
   
   <entry>
     <title>语言碎片 2021/07</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/thoughts-of-202107"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/thoughts-of-202107</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/thoughts-of-202107"/>
+    <id>https://paranoiddemon.github.io/blog/posts/thoughts-of-202107</id>
     <published>2021-07-11T15:55:00.000Z</published>
     <updated>2022-03-07T05:36:58.284Z</updated>
     
@@ -193,17 +193,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>Move blog to Typecho</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/typecho"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/typecho</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/typecho"/>
+    <id>https://paranoiddemon.github.io/blog/posts/typecho</id>
     <published>2021-07-11T02:26:00.000Z</published>
     <updated>2022-03-06T16:14:45.237Z</updated>
     
@@ -217,17 +217,17 @@
     
     
     
-    <category term="notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/notes/"/>
+    <category term="notes" scheme="https://paranoiddemon.github.io/blog/categories/notes/"/>
     
     
-    <category term="blog" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/blog/"/>
+    <category term="blog" scheme="https://paranoiddemon.github.io/blog/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Build site with MkDocs</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/mkdocs"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/mkdocs</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/mkdocs"/>
+    <id>https://paranoiddemon.github.io/blog/posts/mkdocs</id>
     <published>2021-06-13T16:22:46.000Z</published>
     <updated>2021-06-19T07:44:21.400Z</updated>
     
@@ -238,19 +238,19 @@
     
     
     
-    <category term="Notes" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/Notes/"/>
+    <category term="Notes" scheme="https://paranoiddemon.github.io/blog/categories/Notes/"/>
     
     
-    <category term="MkDocs" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/MkDocs/"/>
+    <category term="MkDocs" scheme="https://paranoiddemon.github.io/blog/tags/MkDocs/"/>
     
-    <category term="blog" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/blog/"/>
+    <category term="blog" scheme="https://paranoiddemon.github.io/blog/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>两种选择</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/randomness"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/randomness</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/randomness"/>
+    <id>https://paranoiddemon.github.io/blog/posts/randomness</id>
     <published>2021-04-22T16:22:46.000Z</published>
     <updated>2021-07-11T05:38:36.052Z</updated>
     
@@ -261,17 +261,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>恶心</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/nausea"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/nausea</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/nausea"/>
+    <id>https://paranoiddemon.github.io/blog/posts/nausea</id>
     <published>2021-03-24T16:01:46.000Z</published>
     <updated>2021-03-24T16:49:02.000Z</updated>
     
@@ -282,17 +282,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>语言碎片 2020/09</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/thoughtsof202009"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/thoughtsof202009</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/thoughtsof202009"/>
+    <id>https://paranoiddemon.github.io/blog/posts/thoughtsof202009</id>
     <published>2020-09-26T16:22:46.000Z</published>
     <updated>2020-09-27T15:15:16.000Z</updated>
     
@@ -303,17 +303,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>超越规训社会/韩炳哲</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/Mudigkeitsgesellschaft"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/Mudigkeitsgesellschaft</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/Mudigkeitsgesellschaft"/>
+    <id>https://paranoiddemon.github.io/blog/posts/Mudigkeitsgesellschaft</id>
     <published>2020-07-25T16:24:46.000Z</published>
     <updated>2021-07-11T13:34:26.596Z</updated>
     
@@ -324,17 +324,17 @@
     
     
     
-    <category term="摘录" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E6%91%98%E5%BD%95/"/>
+    <category term="摘录" scheme="https://paranoiddemon.github.io/blog/categories/%E6%91%98%E5%BD%95/"/>
     
     
-    <category term="Excerpt" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Excerpt/"/>
+    <category term="Excerpt" scheme="https://paranoiddemon.github.io/blog/tags/Excerpt/"/>
     
   </entry>
   
   <entry>
     <title>DIGITAL GRAVEYARD</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/gravestone"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/gravestone</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/gravestone"/>
+    <id>https://paranoiddemon.github.io/blog/posts/gravestone</id>
     <published>2020-07-19T16:30:46.000Z</published>
     <updated>2021-07-11T05:37:10.636Z</updated>
     
@@ -345,15 +345,15 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
   </entry>
   
   <entry>
     <title>去往远方的猪圈</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/digital-panopticon"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/digital-panopticon</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/digital-panopticon"/>
+    <id>https://paranoiddemon.github.io/blog/posts/digital-panopticon</id>
     <published>2020-07-14T16:30:46.000Z</published>
     <updated>2020-08-31T13:53:49.000Z</updated>
     
@@ -364,17 +364,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>Google Keep 闯作收录</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/keep-notes"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/keep-notes</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/keep-notes"/>
+    <id>https://paranoiddemon.github.io/blog/posts/keep-notes</id>
     <published>2020-07-08T16:30:46.000Z</published>
     <updated>2020-09-25T02:49:44.000Z</updated>
     
@@ -385,17 +385,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>Breaking Out of the Prisoner&#39;s Dilemma</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/how-to-break-prison"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/how-to-break-prison</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/how-to-break-prison"/>
+    <id>https://paranoiddemon.github.io/blog/posts/how-to-break-prison</id>
     <published>2020-07-08T16:24:46.000Z</published>
     <updated>2020-08-31T13:45:37.000Z</updated>
     
@@ -406,17 +406,17 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
   <entry>
     <title>Aria2+Bilibili Evolved批量下载B站视频</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/aria2-bilibili"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/aria2-bilibili</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/aria2-bilibili"/>
+    <id>https://paranoiddemon.github.io/blog/posts/aria2-bilibili</id>
     <published>2020-07-06T16:24:46.000Z</published>
     <updated>2020-07-08T12:45:08.000Z</updated>
     
@@ -427,17 +427,17 @@
     
     
     
-    <category term="其他" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="其他" scheme="https://paranoiddemon.github.io/blog/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-    <category term="Aria2" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Aria2/"/>
+    <category term="Aria2" scheme="https://paranoiddemon.github.io/blog/tags/Aria2/"/>
     
   </entry>
   
   <entry>
     <title>如何确立一种深信不疑</title>
-    <link href="https://paranoiddemon.github.io/paranoiddemon.github.io/posts/how-to-believe"/>
-    <id>https://paranoiddemon.github.io/paranoiddemon.github.io/posts/how-to-believe</id>
+    <link href="https://paranoiddemon.github.io/blog/posts/how-to-believe"/>
+    <id>https://paranoiddemon.github.io/blog/posts/how-to-believe</id>
     <published>2020-06-30T16:24:46.000Z</published>
     <updated>2020-08-31T13:45:26.000Z</updated>
     
@@ -448,10 +448,10 @@
     
     
     
-    <category term="经验" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://paranoiddemon.github.io/blog/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="Thoughts" scheme="https://paranoiddemon.github.io/paranoiddemon.github.io/tags/Thoughts/"/>
+    <category term="Thoughts" scheme="https://paranoiddemon.github.io/blog/tags/Thoughts/"/>
     
   </entry>
   
