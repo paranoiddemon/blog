@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="做饭的时候看青菜的生产日期，突然回想起，我正好是两年前的今天开始学习编程，第一次写下Hello World。现在作为一个程序员工作都已经一年有余，正好周末总结下两年的学习成果，算是对这两年时间的记录。 编程语言 Java目前的工作语言，主要写Web后端。比较熟悉，语言特性，API，JVM多少都有些了解。当时看的是 尚硅谷Java入门视频教程 ，讲的很好很易懂。并不比很多大学老师讲的差，注重实用性，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Become a Programmer">
+<meta property="og:url" content="https://blog.210222.xyz/posts/be-a-programmer">
+<meta property="og:site_name" content="LANDFILL">
+<meta property="og:description" content="做饭的时候看青菜的生产日期，突然回想起，我正好是两年前的今天开始学习编程，第一次写下Hello World。现在作为一个程序员工作都已经一年有余，正好周末总结下两年的学习成果，算是对这两年时间的记录。 编程语言 Java目前的工作语言，主要写Web后端。比较熟悉，语言特性，API，JVM多少都有些了解。当时看的是 尚硅谷Java入门视频教程 ，讲的很好很易懂。并不比很多大学老师讲的差，注重实用性，">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-12T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-09T16:40:37.847Z">
+<meta property="article:author" content="exit.">
+<meta property="article:tag" content="Programming">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>How to Become a Programmer</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="LANDFILL" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body class="max-width mx-auto px3 ltr">    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/posts/go-basic"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/binary-tree-basics"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/be-a-programmer"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/be-a-programmer&text=How to Become a Programmer"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/be-a-programmer&is_video=false&description=How to Become a Programmer"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Become a Programmer&body=Check out this article: https://blog.210222.xyz/posts/be-a-programmer"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/be-a-programmer&name=How to Become a Programmer&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/be-a-programmer&t=How to Become a Programmer"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">编程语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CS%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">CS基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%BC%80%E5%8F%91"><span class="toc-number">3.</span> <span class="toc-text">Web开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        How to Become a Programmer
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">exit.</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-06-12T04:00:00.000Z" itemprop="datePublished">2022-06-12</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Notes/">Notes</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Programming/" rel="tag">Programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>做饭的时候看青菜的生产日期，突然回想起，我正好是两年前的今天开始学习编程，第一次写下Hello World。现在作为一个程序员工作都已经一年有余，正好周末总结下两年的学习成果，算是对这两年时间的记录。</p>
+<h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><ol>
+<li>Java<br>目前的工作语言，主要写Web后端。比较熟悉，语言特性，API，JVM多少都有些了解。当时看的是 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程</a> ，讲的很好很易懂。并不比很多大学老师讲的差，注重实用性，细节且全面，对于两年前初学编程的我来说非常好的教程。</li>
+<li>JavaScript/TypeScript<br>基本的语法风格和Java有蛮多相似处。学习起来并不算那么费劲，但是写的不多。但是这种动态语言写起来还是很爽的。TypeScript内容也不算很多，看文档学习。阮一峰的两本教程写的很好。<a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/">JavaScript 教程 - 网道</a> 和<a target="_blank" rel="noopener" href="https://wangdoc.com/es6/">ES6 教程 - 网道</a>。现在学习新的技术，看文档效率会高一些。偶尔也会看视频学习。<br>学了一些React，或许有时间自己写个Side Project。Vue和Angular看过点文档，公司在用Angular。很少写前端。</li>
+<li>Go<br>最近学习分布式系统，需要用Go，看了<a target="_blank" rel="noopener" href="https://go.dev/tour/welcome/1">A Tour of Go</a>，最近在用Go刷题，熟悉下语法。还是要多写。</li>
+<li>Python<br>看了Github上的教程 <a target="_blank" rel="noopener" href="https://github.com/jackfrued/Python-100-Days">jackfrued/Python-100-Days: Python - 100天从新手到大师</a>。一直没咋用，都快忘了。</li>
+<li>Haskell<br>其实还看了点函数式语言，看了点Haskell教程，<a target="_blank" rel="noopener" href="http://learnyouahaskell.com/introduction">Introduction - Learn You a Haskell for Great Good!</a> 但是并没有坚持下去，之后有机会再学学看。</li>
+</ol>
+<h2 id="CS基础"><a href="#CS基础" class="headerlink" title="CS基础"></a>CS基础</h2><p>毕竟不是科班出身。很多基础课程该补还是得补。学的东西可能才达到普通CS本科生30-40%的水平吧，道阻且长。</p>
+<ol>
+<li>操作系统<br>主要看了 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1uW411f72n?spm_id_from=333.337.search-card.all.click&amp;vd_source=8e1a20c85a51789c4d1b6ca3da3184a3">清华 操作系统原理</a> ，最近看了一些南京大学的操作系统课程讲的会比较深入一些。书读完了OSTEP <a target="_blank" rel="noopener" href="https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a>，已经有中文版了。</li>
+<li>编译器<br>本来在看Engineering a  compiler。看了三章实在是过于抽象。又找到了 <a target="_blank" rel="noopener" href="http://craftinginterpreters.com/">Crafting Interpreters</a>，教程写的非常好。每一章结束都能有一个能跑的程序，具体多了。但是只实现了第一部分的jlox解释器。第二部分用C语言写一个VM或许才是更主要的部分。精力不足就搁置了。</li>
+<li>体系结构<br>看了<a target="_blank" rel="noopener" href="https://book.douban.com/subject/4822685//">编码 (豆瓣)</a>，非常好的一本书，想要理解计算机是怎么运作的，CPU是如何计算的，这是一本非常简明易懂的书。还有CSAPP也是很著名了，我还没有看完。</li>
+<li>计算机网络<br>看了 谢希仁的计算机网络，买了计算机网络自顶向下，但是还没有读完。HTTP, HTTPS(TLS), TCP/IP协议栈。细节比较多。</li>
+<li>数据结构和算法<br>在Coursera上看了两周Princeton的算法课，也没有看完，但是配套的教材 算法第四版是本非常好的书，可以时常查阅。另外在B站看了左程云的算法课。理论性肯定不如Princeton的课，但是更加实用一点。对基础数据结构比较熟悉。LeetCode最近没事在刷，目前大概做了230题左右，算是有挺多进步的。</li>
+<li>数据库原理<br>之前在看CMU的Andy Pavlo的课<a target="_blank" rel="noopener" href="https://15445.courses.cs.cmu.edu/fall2021/">CMU 15-445/645 :: Intro to Database Systems (Fall 2021)</a>，但是课程也只看了五周左右，看到Buffer Pool部分。之后找时间再继续看吧。</li>
+<li>分布式系统<br>在学习MIT的 <a target="_blank" rel="noopener" href="https://pdos.csail.mit.edu/6.824/schedule.html">6.824 Schedule: Spring 2022</a> 希望能坚持把Lab都做完。<br>DDIA基本读完了。非常好的分布式系统的书。</li>
+</ol>
+<h2 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h2><ol>
+<li>Git<br>现在对git算是能比较用的娴熟，之前还是很多都不懂。主要看的 <a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2">Git - Book</a></li>
+<li>CI/CD<br>最近项目用到，学习了一些CI/CD 相关的东西。 TeamCity Openshift之类的。还有一些公司在用的不是那么大众的工具，顺便因为公司的一个legacy项目了解了一些.NET相关的技术。</li>
+<li>其他一些Web框架，中间件，类库。大概是知道怎么用吧，原理还有很多不懂的，不列举了。学会看文档，很多东西学起来也快。</li>
+<li>设计模式，软件工程等</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>最重要的能力其实是，善于使用搜索引擎，不要用百度，尽量使用英文搜索。自己解决问题，收集信息。</li>
+<li>需要持续不断学习，保持好奇心，保持折腾，持之以恒。有时候也挺辛苦的</li>
+<li>注意身体健康。容易久坐和熬夜。多运动，少坐，保持良好的习惯</li>
+<li>有时候不能把眼光局限在那一点地方，Think outside the box</li>
+</ol>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">编程语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CS%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">CS基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%BC%80%E5%8F%91"><span class="toc-number">3.</span> <span class="toc-text">Web开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/be-a-programmer"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/be-a-programmer&text=How to Become a Programmer"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/be-a-programmer&is_video=false&description=How to Become a Programmer"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Become a Programmer&body=Check out this article: https://blog.210222.xyz/posts/be-a-programmer"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/be-a-programmer&title=How to Become a Programmer"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/be-a-programmer&name=How to Become a Programmer&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/be-a-programmer&t=How to Become a Programmer"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    exit.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK27SZJN7L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TK27SZJN7L');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'paranoiddemon/blog';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

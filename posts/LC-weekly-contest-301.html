@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Q16112. 装满杯子需要的最短总时长 - 力扣（LeetCode） 提交1234567891011121314151617181920class Solution &#123;    public int fillCups(int[] amount) &#123;        Arrays.sort(amount);        int min &#x3D; amount[0];        in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode Weekly Contest 301">
+<meta property="og:url" content="https://blog.210222.xyz/posts/LC-weekly-contest-301">
+<meta property="og:site_name" content="LANDFILL">
+<meta property="og:description" content="Q16112. 装满杯子需要的最短总时长 - 力扣（LeetCode） 提交1234567891011121314151617181920class Solution &#123;    public int fillCups(int[] amount) &#123;        Arrays.sort(amount);        int min &#x3D; amount[0];        in">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111419296.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111442344.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111442051.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111443310.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111129824.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111132010.png">
+<meta property="article:published_time" content="2022-07-11T06:44:00.000Z">
+<meta property="article:modified_time" content="2025-02-09T16:40:37.848Z">
+<meta property="article:author" content="exit.">
+<meta property="article:tag" content="Programming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111419296.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>LeetCode Weekly Contest 301</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="LANDFILL" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body class="max-width mx-auto px3 ltr">    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/posts/deploy-code-server"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/go-basic"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/LC-weekly-contest-301"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&text=LeetCode Weekly Contest 301"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&is_video=false&description=LeetCode Weekly Contest 301"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=LeetCode Weekly Contest 301&body=Check out this article: https://blog.210222.xyz/posts/LC-weekly-contest-301"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&name=LeetCode Weekly Contest 301&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/LC-weekly-contest-301&t=LeetCode Weekly Contest 301"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Q1"><span class="toc-number">1.</span> <span class="toc-text">Q1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4"><span class="toc-number">1.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83"><span class="toc-number">1.2.</span> <span class="toc-text">贪心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q2"><span class="toc-number">2.</span> <span class="toc-text">Q2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4-1"><span class="toc-number">2.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set"><span class="toc-number">2.2.</span> <span class="toc-text">set</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q3"><span class="toc-number">3.</span> <span class="toc-text">Q3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4-2"><span class="toc-number">3.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-number">3.2.</span> <span class="toc-text">双指针</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q4"><span class="toc-number">4.</span> <span class="toc-text">Q4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%95%B0-DP"><span class="toc-number">4.1.</span> <span class="toc-text">组合数 DP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B%E6%90%9C%E7%B4%A2"><span class="toc-number">4.2.</span> <span class="toc-text">暴力搜索</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        LeetCode Weekly Contest 301
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">exit.</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-11T06:44:00.000Z" itemprop="datePublished">2022-07-11</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Notes/">Notes</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Programming/" rel="tag">Programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-amount-of-time-to-fill-cups/">6112. 装满杯子需要的最短总时长 - 力扣（LeetCode）</a><br><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111419296.png" alt=""></p>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fillCups</span><span class="params">(<span class="type">int</span>[] amount)</span> &#123;</span><br><span class="line">        Arrays.sort(amount);</span><br><span class="line">        <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> amount[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> amount[<span class="number">1</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> amount[<span class="number">2</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        res += min;</span><br><span class="line">        <span class="comment">// 先把max 减到和mid一样</span></span><br><span class="line">        <span class="keyword">while</span>(min &gt;<span class="number">0</span> &amp;&amp; max &gt; mid)&#123;</span><br><span class="line">            max--;</span><br><span class="line">            min--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 然后再同时减</span></span><br><span class="line">        max -= min/<span class="number">2</span>;</span><br><span class="line">        mid -= (min + <span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">        res += Math.max(max, mid);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><p>从最大的两个数开始减少<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fillCups</span><span class="params">(<span class="type">int</span>[] amount)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">// 每次都排序。从最大的两个数开始减。如果中间的数都为0。再加上残余的最大值。</span></span><br><span class="line">            Arrays.sort(amount);</span><br><span class="line">            <span class="keyword">if</span> (amount[<span class="number">1</span>] == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">            amount[<span class="number">2</span>]--;</span><br><span class="line">            amount[<span class="number">1</span>]--;</span><br><span class="line">            res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res + amount[<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>如果 最大值 大于另外两个和。返回最大值<br>如果 最大值小于另外两个和。<br>a &gt;= b &gt;= c<br>当 a &lt;= b +c的时候，每次必然可以拿两个数。<br>当a - 1, b-1, c  最大值仍然为a时， 还是满足a &lt;= b +c这个性质。每次都可以从两边拿<br>当最大值变为c的时候，c同样可以和a一样操作<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fillCups</span><span class="params">(<span class="type">int</span>[] a)</span> &#123;</span><br><span class="line">        Arrays.sort(a);</span><br><span class="line">        <span class="keyword">if</span>(a[<span class="number">2</span>] &gt;= a[<span class="number">0</span>] + a[<span class="number">1</span>]) <span class="keyword">return</span> a[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> (a[<span class="number">0</span>] + a[<span class="number">1</span>] + a[<span class="number">2</span>] + <span class="number">1</span>) /<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/smallest-number-in-infinite-set/">6113. 无限集中的最小数字 - 力扣（LeetCode）</a><br><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111442344.png" alt=""></p>
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SmallestInfiniteSet</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] s = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SmallestInfiniteSet</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++)&#123;</span><br><span class="line">            s[i] = i + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">popSmallest</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] != -<span class="number">1</span>) &#123;</span><br><span class="line">                res = s[i];</span><br><span class="line">                s[i] = -<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addBack</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[num-<span class="number">1</span>] == -<span class="number">1</span>)&#123;</span><br><span class="line">            s[num - <span class="number">1</span>] = num;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your SmallestInfiniteSet object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * SmallestInfiniteSet obj = new SmallestInfiniteSet();</span></span><br><span class="line"><span class="comment"> * int param_1 = obj.popSmallest();</span></span><br><span class="line"><span class="comment"> * obj.addBack(num);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>使用set存被删除的数。无限集如果数据量大的话，就过不了了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SmallestInfiniteSet</span> &#123;</span><br><span class="line">    HashSet&lt;Integer&gt; set;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SmallestInfiniteSet</span><span class="params">()</span> &#123;</span><br><span class="line">        set=<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">popSmallest</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(set.contains(res))&#123;</span><br><span class="line">            res++;</span><br><span class="line">        &#125;</span><br><span class="line">        set.add(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addBack</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(set.contains(num)) set.remove(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-pieces-to-obtain-a-string/">6114. 移动片段得到字符串 - 力扣（LeetCode）</a><br>同 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-adjacent-in-lr-string/">777. 在LR字符串中交换相邻字符 - 力扣（LeetCode）</a><br><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111442051.png" alt=""></p>
+<h3 id="提交-2"><a href="#提交-2" class="headerlink" title="提交"></a>提交</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canChange</span><span class="params">(String start, String target)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> start.length();</span><br><span class="line">        <span class="comment">// L不能超过L的原始位置。只能往左。R也是同理。</span></span><br><span class="line">        <span class="keyword">if</span>(!start.replace(<span class="string">&quot;_&quot;</span>, <span class="string">&quot;&quot;</span>).equals(target.replace(<span class="string">&quot;_&quot;</span>, <span class="string">&quot;&quot;</span>))) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            <span class="keyword">if</span> (start.charAt(i) == <span class="string">&#x27;L&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">while</span> (target.charAt(t) != <span class="string">&#x27;L&#x27;</span>) t++;</span><br><span class="line">                <span class="keyword">if</span> (i &lt; t++) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n;i++)</span><br><span class="line">            <span class="keyword">if</span> (start.charAt(i) == <span class="string">&#x27;R&#x27;</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果i 不大于t t移动到下一个位置。继续寻找下一个L R</span></span><br><span class="line">                <span class="keyword">while</span> (target.charAt(t) != <span class="string">&#x27;R&#x27;</span>) t++;</span><br><span class="line">                <span class="keyword">if</span> (i &gt; t++) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canChange</span><span class="params">(string start, string target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = start.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;i &lt; n;)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>(i &lt; n &amp;&amp; start[i] == <span class="string">&#x27;_&#x27;</span>)i++;</span><br><span class="line">            <span class="keyword">while</span>(j &lt; n &amp;&amp; target[j] == <span class="string">&#x27;_&#x27;</span>)j++;</span><br><span class="line">            <span class="comment">// 如果分别为L R 显然相对位置不同。返回false</span></span><br><span class="line">            <span class="keyword">if</span>(start[i] != target[j])<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="comment">// target的L要在更左。R要在更右。</span></span><br><span class="line">            <span class="keyword">if</span>(start[i] == <span class="string">&#x27;R&#x27;</span> &amp;&amp; j &lt; i)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(start[i] == <span class="string">&#x27;L&#x27;</span> &amp;&amp; j &gt; i)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-the-number-of-ideal-arrays/">6115. 统计理想数组的数目 - 力扣（LeetCode）</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111443310.png" alt=""></p>
+<h3 id="组合数-DP"><a href="#组合数-DP" class="headerlink" title="组合数 DP"></a>组合数 DP</h3><p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111129824.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/paranoiddemon/picbed@master/imgs/202207111132010.png" alt=""></p>
+<p>n是数组的长度，t是不同元素的个数。<br>如果可以相同，就是计算组合数从n -1个位置里 选出t-1个位置。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> MOD = <span class="number">1000000007</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> MAXP = <span class="number">16</span>; <span class="comment">// 2^16 &gt; 10000, n &lt;= 10000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">idealArrays</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> K)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// nlnn 求因数</span></span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">fac</span>(K + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= K; i++) </span><br><span class="line">            <span class="comment">// 求的是j的因数的数组</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i &lt;&lt; <span class="number">1</span>; j &lt;= K; j += i) </span><br><span class="line">            fac[j].<span class="built_in">push_back</span>(i);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算子问题的答案</span></span><br><span class="line">        vector&lt;vector&lt;<span class="type">long</span> <span class="type">long</span>&gt;&gt; f;        </span><br><span class="line">        f.<span class="built_in">resize</span>(K + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="type">long</span> <span class="type">long</span>&gt;(<span class="number">20</span>));</span><br><span class="line">        <span class="comment">// i的最大值为K</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= K; i++) &#123;</span><br><span class="line">            <span class="comment">// 以1为结尾只有一种方案</span></span><br><span class="line">            f[i][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">2</span>; j &lt;= MAXP; j++) </span><br><span class="line">            <span class="comment">// t是i的因数。加上子问题的方案书。以因数为结尾。长度减去1的情况</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> t : fac[i]) </span><br><span class="line">                f[i][j] = (f[i][j] + f[t][j - <span class="number">1</span>]) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 求组合数</span></span><br><span class="line">        vector&lt;vector&lt;<span class="type">long</span> <span class="type">long</span>&gt;&gt; C;</span><br><span class="line">        C.<span class="built_in">resize</span>(n + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="type">long</span> <span class="type">long</span>&gt;(<span class="number">20</span>));</span><br><span class="line">        C[<span class="number">0</span>][<span class="number">0</span>] = C[<span class="number">1</span>][<span class="number">0</span>] = C[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            C[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= i &amp;&amp; j &lt;= MAXP; j++) </span><br><span class="line">                C[i][j] = (C[i - <span class="number">1</span>][j] + C[i - <span class="number">1</span>][j - <span class="number">1</span>]) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 统计最终答案</span></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= K; i++) </span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= MAXP; j++) </span><br><span class="line">        <span class="comment">// 以i为最后一个元素。且数组长度为j的数量。组合数-&gt; 计算出元素重复使用的情况</span></span><br><span class="line">            ans = (ans + C[n - <span class="number">1</span>][j - <span class="number">1</span>] * f[i][j]) % MOD;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> MOD = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; f;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> cnt)</span> </span>&#123;</span><br><span class="line">        ans = (ans + f[n - <span class="number">1</span>][cnt - <span class="number">1</span>]) % MOD;</span><br><span class="line">        <span class="comment">// 数组长度小于n</span></span><br><span class="line">        <span class="keyword">if</span> (cnt &lt; n) &#123;</span><br><span class="line">            <span class="comment">// 从起点开始 乘以所有的质因数，小于最大值</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * u &lt;= m; i ++ )</span><br><span class="line">                <span class="built_in">dfs</span>(i * u, cnt + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">idealArrays</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;n = n, <span class="keyword">this</span>-&gt;m = m;</span><br><span class="line">        f = vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(<span class="number">20</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">20</span> &amp;&amp; j &lt;= i; j ++ )</span><br><span class="line">                <span class="comment">// j为0</span></span><br><span class="line">                <span class="keyword">if</span> (!j) f[i][j] = <span class="number">1</span>;</span><br><span class="line">                <span class="comment">// 组合数</span></span><br><span class="line">                <span class="keyword">else</span> f[i][j] = (f[i - <span class="number">1</span>][j] + f[i - <span class="number">1</span>][j - <span class="number">1</span>]) % MOD;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i ++ )</span><br><span class="line">            <span class="comment">// 从1开始搜索 到最大值为止。</span></span><br><span class="line">            <span class="built_in">dfs</span>(i, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Q1"><span class="toc-number">1.</span> <span class="toc-text">Q1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4"><span class="toc-number">1.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83"><span class="toc-number">1.2.</span> <span class="toc-text">贪心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q2"><span class="toc-number">2.</span> <span class="toc-text">Q2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4-1"><span class="toc-number">2.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set"><span class="toc-number">2.2.</span> <span class="toc-text">set</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q3"><span class="toc-number">3.</span> <span class="toc-text">Q3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4-2"><span class="toc-number">3.1.</span> <span class="toc-text">提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-number">3.2.</span> <span class="toc-text">双指针</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q4"><span class="toc-number">4.</span> <span class="toc-text">Q4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%95%B0-DP"><span class="toc-number">4.1.</span> <span class="toc-text">组合数 DP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B%E6%90%9C%E7%B4%A2"><span class="toc-number">4.2.</span> <span class="toc-text">暴力搜索</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/LC-weekly-contest-301"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&text=LeetCode Weekly Contest 301"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&is_video=false&description=LeetCode Weekly Contest 301"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=LeetCode Weekly Contest 301&body=Check out this article: https://blog.210222.xyz/posts/LC-weekly-contest-301"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&title=LeetCode Weekly Contest 301"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/LC-weekly-contest-301&name=LeetCode Weekly Contest 301&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/LC-weekly-contest-301&t=LeetCode Weekly Contest 301"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    exit.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK27SZJN7L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TK27SZJN7L');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'paranoiddemon/blog';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

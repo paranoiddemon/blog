@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Reference  Hardware Acceleration with LXC on Proxmox Server - Linux - Emby Community Intel N100&#x2F;iGPU Passthrough to VM and use with Docker | Proxmox Support Forum  On PVE host123456789lspci -k…00:02.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Emby HW Acceleration on N100 PVE LXC">
+<meta property="og:url" content="https://blog.210222.xyz/posts/emby-hw-acc">
+<meta property="og:site_name" content="LANDFILL">
+<meta property="og:description" content="Reference  Hardware Acceleration with LXC on Proxmox Server - Linux - Emby Community Intel N100&#x2F;iGPU Passthrough to VM and use with Docker | Proxmox Support Forum  On PVE host123456789lspci -k…00:02.0">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-01-11T02:52:12.000Z">
+<meta property="article:modified_time" content="2025-02-09T16:40:37.848Z">
+<meta property="article:author" content="exit.">
+<meta property="article:tag" content="homeserver">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Emby HW Acceleration on N100 PVE LXC</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="LANDFILL" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body class="max-width mx-auto px3 ltr">    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/posts/2025-spring-festival"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/november-2024"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/emby-hw-acc"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/emby-hw-acc&text=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/emby-hw-acc&is_video=false&description=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Emby HW Acceleration on N100 PVE LXC&body=Check out this article: https://blog.210222.xyz/posts/emby-hw-acc"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/emby-hw-acc&name=Emby HW Acceleration on N100 PVE LXC&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/emby-hw-acc&t=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#On-PVE-host"><span class="toc-number">1.</span> <span class="toc-text">On PVE host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-LXC"><span class="toc-number">2.</span> <span class="toc-text">On LXC</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Emby HW Acceleration on N100 PVE LXC
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">exit.</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-01-11T02:52:12.000Z" itemprop="datePublished">2025-01-11</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tech/">tech</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/homeserver/" rel="tag">homeserver</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Reference</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://emby.media/community/index.php?/topic/126031-hardware-acceleration-with-lxc-on-proxmox-server/">Hardware Acceleration with LXC on Proxmox Server - Linux - Emby Community</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.proxmox.com/threads/intel-n100-igpu-passthrough-to-vm-and-use-with-docker.140370/">Intel N100/iGPU Passthrough to VM and use with Docker | Proxmox Support Forum</a></li>
+</ul>
+<h3 id="On-PVE-host"><a href="#On-PVE-host" class="headerlink" title="On PVE host"></a>On PVE host</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">lspci -k</span><br><span class="line"></span><br><span class="line">…</span><br><span class="line">00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics]</span><br><span class="line">DeviceName: Onboard - Video</span><br><span class="line">Subsystem: Intel Corporation Alder Lake-N [UHD Graphics]</span><br><span class="line">Kernel driver <span class="keyword">in</span> use: i915</span><br><span class="line">Kernel modules: i915</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l /dev/dri</span><br><span class="line">total 0</span><br><span class="line">drwxr-xr-x 2 root root 80 Feb 5 01:16 by-path</span><br><span class="line">crw-rw---- 1 root video 226, 0 Feb 5 01:16 card0</span><br><span class="line">crw-rw---- 1 root render 226, 128 Feb 5 01:16 renderD128</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[!NOTE]</p>
+<ul>
+<li><strong>/dev/dri/cardX</strong><ul>
+<li>每个 <code>cardX</code>（如 <code>card0</code>, <code>card1</code>）表示系统中的一个显卡设备。</li>
+<li>这是应用程序与显卡交互的主要入口。</li>
+</ul>
+</li>
+<li><strong>/dev/dri/renderDXXX</strong><ul>
+<li><code>renderDXXX</code>（如 <code>renderD128</code>, <code>renderD129</code>）是专门为现代应用程序设计的设备节点，主要用于无显示输出的计算任务，例如 GPU 加速的计算、OpenCL 或 Vulkan 等。</li>
+<li>它们与显示器无关，仅用于离屏渲染任务。</li>
+</ul>
+</li>
+<li><strong>/dev/dri/controlDXX</strong><ul>
+<li><code>controlDXX</code> 设备节点通常用于 DRM（Direct Rendering Manager）控制接口，主要供图形服务器（如 Xorg 或 Wayland）使用。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/pve/lxc/101.conf <span class="comment"># add following config to your lxc</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lxc.cgroup2.devices.allow: c 226:0 rwm # 226是显卡设备</span><br><span class="line">lxc.cgroup2.devices.allow: c 226:128 rwm # 次设备号 `128` 通常对应某些特定的 GPU 子设备或驱动（例如渲染设备 `/dev/dri/renderD128`)</span><br><span class="line">lxc.cgroup2.devices.allow: c 29:0 rwm # Framebuffer</span><br><span class="line">lxc.mount.entry: /dev/dri dev/dri none bind,optional,create=dir</span><br><span class="line">lxc.mount.entry: /dev/fb0 dev/fb0 none bind,optional,create=file</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[!NOTE]</p>
+<ul>
+<li><strong><code>lxc.cgroup2.devices.allow: c 226:0 rwm</code></strong> - 允许容器访问主机的 GPU 控制设备。</li>
+<li><strong><code>lxc.cgroup2.devices.allow: c 226:128 rwm</code></strong> - 允许容器访问主机的 GPU 渲染设备。</li>
+<li><strong><code>lxc.cgroup2.devices.allow: c 29:0 rwm</code></strong> - 允许容器访问主机的帧缓冲设备。</li>
+<li><strong><code>lxc.mount.entry: /dev/dri dev/dri none bind,optional,create=dir</code></strong> - 挂载主机的 GPU 目录 <code>/dev/dri</code> 到容器。</li>
+<li><strong><code>lxc.mount.entry: /dev/fb0 dev/fb0 none bind,optional,create=file</code></strong> - 挂载主机的帧缓冲设备 <code>/dev/fb0</code> 到容器。</li>
+</ul>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R 777 /dev/dri/* <span class="comment"># 所有用户 读写执行权限 </span></span><br></pre></td></tr></table></figure>
+<h3 id="On-LXC"><a href="#On-LXC" class="headerlink" title="On LXC"></a>On LXC</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> usermod -aG video replica  <span class="comment"># add user to group</span></span><br><span class="line"><span class="built_in">sudo</span> usermod -aG input replica</span><br><span class="line"><span class="built_in">sudo</span> usermod -aG render replica</span><br><span class="line"></span><br><span class="line"><span class="comment"># run emby docker and pass device</span></span><br><span class="line">docker run -d --name=emby --restart=always \</span><br><span class="line">    -v /home/replica/emby/config:/config \</span><br><span class="line">	-v /mnt/usb:/mnt/usb \</span><br><span class="line">	-v /mnt/sata:/mnt/sata \</span><br><span class="line">	-p 8096:8096 -p 8920:8920 \</span><br><span class="line">	-e UID=1000 -e GID=100 -e GIDLIST=100 \</span><br><span class="line">	--device /dev/dri:/dev/dri \ <span class="comment"># passthrough to docker</span></span><br><span class="line">	xinjiawei1/emby_unlockd:stable</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#On-PVE-host"><span class="toc-number">1.</span> <span class="toc-text">On PVE host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-LXC"><span class="toc-number">2.</span> <span class="toc-text">On LXC</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.210222.xyz/posts/emby-hw-acc"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.210222.xyz/posts/emby-hw-acc&text=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.210222.xyz/posts/emby-hw-acc&is_video=false&description=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Emby HW Acceleration on N100 PVE LXC&body=Check out this article: https://blog.210222.xyz/posts/emby-hw-acc"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.210222.xyz/posts/emby-hw-acc&title=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.210222.xyz/posts/emby-hw-acc&name=Emby HW Acceleration on N100 PVE LXC&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.210222.xyz/posts/emby-hw-acc&t=Emby HW Acceleration on N100 PVE LXC"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    exit.
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK27SZJN7L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TK27SZJN7L');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'paranoiddemon/blog';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
